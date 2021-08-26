@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Test HTML Doc</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <div style="display: flex, align-item:center;justify-content:center">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-        accusantium atque numquam placeat, eligendi ullam saepe eius praesentium
-        beatae voluptates nisi doloremque quisquam? Recusandae, odio fuga! Ipsam
-        quaerat autem quisquam in a cumque ullam, ut enim, vitae quis error?
-        Incidunt, recusandae est! Molestiae consequatur praesentium aliquam
-        facilis deserunt alias debitis aut laboriosam, natus beatae animi vel
-        assumenda eos accusantium vitae, ipsam dolore nesciunt voluptatem
-        accusamus ullam! Dolorum aut suscipit minima explicabo nostrum magni
-        odio perspiciatis quos repudiandae beatae ipsum reiciendis doloremque
-        corporis eum voluptas velit, dolorem labore facilis modi nemo! Cum
-        repudiandae atque sit officia amet inventore beatae dolores tempora.
-      </p>
+{% extends 'base.html' %}
+{% block title %}Home {% endblock title %}
+{% block body %}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/random/900x600" class="d-block w-100" alt="...">
     </div>
-  </body>
-</html>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/random/900x600" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/random/900x600" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock body %}

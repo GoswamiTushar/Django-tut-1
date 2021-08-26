@@ -5,16 +5,20 @@ from django.shortcuts import render, HttpResponse
 
 def index(request):
     # return HttpResponse("This is Homepage")
-    return render(request, 'index.html')
+    context = {"var2": "Django app", "variable": "Test paragraph"}
+    return render(request, 'index.html', context)
 
 
 def about(request):
-    return HttpResponse("This is about page")
+    return render(request, 'about.html')
+    # return HttpResponse("This is about page")
 
 
 def services(request):
-    return HttpResponse("This is services page")
+    return render(request, 'services.html')
+    # return HttpResponse("This is services page")
 
 
 def contact(request):
-    return HttpResponse("This is Contact page")
+    return render(request, 'contact.html')
+    # return HttpResponse("This is Contact page")
